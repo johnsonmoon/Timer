@@ -11,9 +11,9 @@ import java.io.InputStreamReader;
  */
 public class EasyTimerTest {
 
-    public static void main(String args[]){
+    public static void test(String args[]){
         //testExecute();
-        testExecute2();
+        //testExecute2();
     }
 
     public static void testExecute2(){

@@ -12,13 +12,13 @@ import java.util.Date;
  * Created by Xuyh at 2016/08/04 下午 03:16.
  */
 public class SingleThreadSchedualTimerTest {
-    public static void main(String args[]){
+    public static void test(String args[]){
         //testExecute1();
         //testExecute2();
         //testExecute3();
         //testExecute4();
         //testExecute5();
-        testExecute6();
+        //testExecute6();
     }
 
     public static void testExecute1(){

@@ -36,12 +36,14 @@ public class MultiThreadSchedualTimer {
     }
 
     public void execute(final Task task, long delay, long timeInterval){
-        if(!(this.scheduledExecutorService == null)){
+        if(this.scheduledExecutorService != null){
             this.scheduledFutureHandler = this.scheduledExecutorService.scheduleAtFixedRate(new Runnable() {
                 public void run() {
                     task.taskForJob();
                 }
             }, delay, timeInterval, TimeUnit.MILLISECONDS);
+        }else{
+            System.out.println(" null");
         }
     }
 }

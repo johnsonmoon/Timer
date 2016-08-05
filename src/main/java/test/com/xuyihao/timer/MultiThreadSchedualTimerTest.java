@@ -10,8 +10,8 @@ import java.io.InputStreamReader;
  * Created by Xuyh at 2016/08/04 下午 04:29.
  */
 public class MultiThreadSchedualTimerTest {
-    public static void main(String args[]){
-        testExecute();
+    public static void test(String args[]){
+        //testExecute();
     }
 
     public static void testExecute(){
