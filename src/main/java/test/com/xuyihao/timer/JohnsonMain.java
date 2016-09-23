@@ -1,5 +1,6 @@
 package test.com.xuyihao.timer;
 
+import com.xuyihao.timer.util.DateUtils;
 import com.xuyihao.timer.util.TimeUtil;
 
 /**
@@ -7,7 +8,8 @@ import com.xuyihao.timer.util.TimeUtil;
  */
 public class JohnsonMain {
    public static void main(String args[]){
-        while(true) {
+       /*
+       while(true) {
             long remainedTime = TimeUtil.getRemainedTimeMillis("00:00:01");
             remainedTime = remainedTime/1000/60;
             System.out.println(remainedTime);
@@ -17,5 +19,14 @@ public class JohnsonMain {
                 e.printStackTrace();
             }
         }
+        */
+        /*
+       String dateTime = DateUtils.currentDateTime();
+       System.out.println(TimeUtil.getTimeMillisDateTime(dateTime));
+       */
+
+       String before = "2016-09-23 16:13:10";
+       String after = "2016-09-23 16:13:16";
+       System.out.println(TimeUtil.getTimeMillisDateTime(before) - TimeUtil.getTimeMillisDateTime(after));
     }
 }
