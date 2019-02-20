@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * <p>
  * 对scheduledExecutorService进行简单封装的类
  */
-public class MultiThreadSchedualTimer {
+public class MultiThreadScheduleTimer {
     private ScheduledExecutorService scheduledExecutorService;
     private ScheduledFuture scheduledFutureHandler;
 
@@ -19,7 +19,7 @@ public class MultiThreadSchedualTimer {
      *
      * @param threadCount 线程数量
      */
-    public MultiThreadSchedualTimer(int threadCount) {
+    public MultiThreadScheduleTimer(int threadCount) {
         if (threadCount == 1) {
             this.scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
         } else if (threadCount > 1) {

@@ -12,7 +12,7 @@ public class MultiThreadSchedualTimerTest {
     }
 
     public static void testExecute() {
-        MultiThreadSchedualTimer timer = new MultiThreadSchedualTimer(2);
+        MultiThreadScheduleTimer timer = new MultiThreadScheduleTimer(2);
         timer.execute(new Task() {
             private int i = 0;
 

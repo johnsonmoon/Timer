@@ -4,7 +4,7 @@ package com.github.johnsonmoon.timer;
  * Created by Xuyh at 2016/08/05 上午 11:39.
  */
 public class TestStaticCodeBlock {
-    private static MultiThreadSchedualTimer multiThreadSchedualTimer = new MultiThreadSchedualTimer(2);
+    private static MultiThreadScheduleTimer multiThreadSchedualTimer = new MultiThreadScheduleTimer(2);
 
     static {
         System.out.println(123);
