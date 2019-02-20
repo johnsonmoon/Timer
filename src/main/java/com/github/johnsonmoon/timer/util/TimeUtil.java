@@ -1,4 +1,4 @@
-package com.xuyihao.timer.util;
+package com.github.johnsonmoon.timer.util;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -11,12 +11,10 @@ import java.util.Date;
 public class TimeUtil {
     /**
      * 一天二十四小时的毫秒数
-     *
      */
     public static long ONE_DAY_TIME_MILLISECONDS = 24 * 60 * 60 * 1000;
     /**
      * 半天十二小时的毫秒数
-     *
      */
     public static long HALF_DAY_TIME_MILLISECONDS = 12 * 60 * 60 * 1000;
 
@@ -59,12 +57,12 @@ public class TimeUtil {
      * 获取输入目标时间距离当前时间的所剩时间距离
      *
      * @param targetTime 目标时间，格式("HH:MM:SS")
-     * @return 时间差(Unit: MILLISECONDS)
+     * @return 时间差(Unit : MILLISECONDS)
      */
-    public static long getRemainedTimeMillis(String targetTime){
+    public static long getRemainedTimeMillis(String targetTime) {
         long time = getTimeMillis(targetTime);
         long returnTime = time - System.currentTimeMillis();
-        if(returnTime < 0){
+        if (returnTime < 0) {
             returnTime += ONE_DAY_TIME_MILLISECONDS;
         }
         return returnTime;

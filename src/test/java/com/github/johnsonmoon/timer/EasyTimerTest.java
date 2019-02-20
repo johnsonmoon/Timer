@@ -1,7 +1,4 @@
-package test.com.xuyihao.timer;
-
-import com.xuyihao.timer.EasyTimer;
-import com.xuyihao.timer.Task;
+package com.github.johnsonmoon.timer;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -11,15 +8,16 @@ import java.io.InputStreamReader;
  */
 public class EasyTimerTest {
 
-    public static void test(String args[]){
+    public static void test(String args[]) {
         //testExecute();
         //testExecute2();
     }
 
-    public static void testExecute2(){
+    public static void testExecute2() {
         EasyTimer timer = new EasyTimer(2000);
         timer.execute(new Task() {
             private int i = 0;
+
             @Override
             public void taskForJob() {
                 i++;
@@ -30,15 +28,16 @@ public class EasyTimerTest {
             if (new BufferedReader(new InputStreamReader(System.in)).readLine().equals("stop")) {
                 timer.stop();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void testExecute(){
+    public static void testExecute() {
         EasyTimer timer = new EasyTimer();
         Task task = new Task() {
             private int i = 0;
+
             @Override
             public void taskForJob() {
                 i++;

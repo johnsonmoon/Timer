@@ -1,7 +1,4 @@
-package test.com.xuyihao.timer;
-
-import com.xuyihao.timer.MultiThreadSchedualTimer;
-import com.xuyihao.timer.Task;
+package com.github.johnsonmoon.timer;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,14 +7,15 @@ import java.io.InputStreamReader;
  * Created by Xuyh at 2016/08/04 下午 04:29.
  */
 public class MultiThreadSchedualTimerTest {
-    public static void test(String args[]){
+    public static void test(String args[]) {
         //testExecute();
     }
 
-    public static void testExecute(){
+    public static void testExecute() {
         MultiThreadSchedualTimer timer = new MultiThreadSchedualTimer(2);
         timer.execute(new Task() {
             private int i = 0;
+
             @Override
             public void taskForJob() {
                 i++;
@@ -28,7 +26,7 @@ public class MultiThreadSchedualTimerTest {
             if (new BufferedReader(new InputStreamReader(System.in)).readLine().equals("stop")) {
                 timer.stop();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

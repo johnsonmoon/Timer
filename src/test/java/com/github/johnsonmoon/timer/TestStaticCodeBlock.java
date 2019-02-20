@@ -1,7 +1,4 @@
-package test.com.xuyihao.timer;
-
-import com.xuyihao.timer.MultiThreadSchedualTimer;
-import com.xuyihao.timer.Task;
+package com.github.johnsonmoon.timer;
 
 /**
  * Created by Xuyh at 2016/08/05 上午 11:39.
@@ -13,6 +10,7 @@ public class TestStaticCodeBlock {
         System.out.println(123);
         multiThreadSchedualTimer.execute(new Task() {
             private int i = 0;
+
             @Override
             public void taskForJob() {
                 i++;
@@ -21,7 +19,7 @@ public class TestStaticCodeBlock {
         }, 1000, 2000);
     }
 
-    public static void abcd(){
+    public static void abcd() {
 
     }
 }

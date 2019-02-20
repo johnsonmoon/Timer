@@ -1,4 +1,4 @@
-package com.xuyihao.timer.util;
+package com.github.johnsonmoon.timer.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,7 +8,8 @@ import java.util.Date;
 /**
  * Created by Xuyh at 2016/08/05 下午 06:58.
  */
-public class DateUtils {private static final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
+public class DateUtils {
+    private static final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
     private static final String DATE_FORMAT = "yyyy-MM-dd";
     private static final String DATE_HOUR_MINUTE_FORMAT = "yyyy-MM-dd HH:mm";
     private static final String YEAR_MONTH_FORMAT = "yyyy-MM";
@@ -17,7 +18,7 @@ public class DateUtils {private static final String DATE_TIME_FORMAT = "yyyy-MM-
     /**
      * 得到当前时间
      *
-     * @return 当前时间,格式"yyyy-MM-dd HH:mm:ss"
+     * @return 当前时间, 格式"yyyy-MM-dd HH:mm:ss"
      */
     public static String currentDate() {
         Date dt = new Date();
@@ -29,7 +30,7 @@ public class DateUtils {private static final String DATE_TIME_FORMAT = "yyyy-MM-
     /**
      * 得到当前时间
      *
-     * @return 当前时间,格式"yyyy-MM-dd HH:mm:ss"
+     * @return 当前时间, 格式"yyyy-MM-dd HH:mm:ss"
      */
     public static String currentDateTime() {
         Date dt = new Date();

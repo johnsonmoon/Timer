@@ -1,7 +1,4 @@
-package test.com.xuyihao.timer;
-
-import com.xuyihao.timer.SingleThreadSchedualTimer;
-import com.xuyihao.timer.Task;
+package com.github.johnsonmoon.timer;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -12,7 +9,7 @@ import java.util.Date;
  * Created by Xuyh at 2016/08/04 下午 03:16.
  */
 public class SingleThreadSchedualTimerTest {
-    public static void test(String args[]){
+    public static void test(String args[]) {
         //testExecute1();
         //testExecute2();
         //testExecute3();
@@ -21,25 +18,25 @@ public class SingleThreadSchedualTimerTest {
         //testExecute6();
     }
 
-    public static void testExecute1(){
-        SingleThreadSchedualTimer timer = new SingleThreadSchedualTimer();
+    public static void testExecute1() {
+        SingleThreadScheduleTimer timer = new SingleThreadScheduleTimer();
         timer.execute(new Task() {
             @Override
             public void taskForJob() {
-               System.out.println("执行！");
+                System.out.println("执行！");
             }
         }, 3000);
         try {
             if (new BufferedReader(new InputStreamReader(System.in)).readLine().equals("stop")) {
                 timer.stop();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void testExecute2(){
-        SingleThreadSchedualTimer timer = new SingleThreadSchedualTimer();
+    public static void testExecute2() {
+        SingleThreadScheduleTimer timer = new SingleThreadScheduleTimer();
         timer.execute(new Task() {
             @Override
             public void taskForJob() {
@@ -50,13 +47,13 @@ public class SingleThreadSchedualTimerTest {
             if (new BufferedReader(new InputStreamReader(System.in)).readLine().equals("stop")) {
                 timer.stop();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void testExecute3(){
-        SingleThreadSchedualTimer timer = new SingleThreadSchedualTimer();
+    public static void testExecute3() {
+        SingleThreadScheduleTimer timer = new SingleThreadScheduleTimer();
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 13);
         calendar.set(Calendar.MINUTE, 50);
@@ -72,13 +69,13 @@ public class SingleThreadSchedualTimerTest {
             if (new BufferedReader(new InputStreamReader(System.in)).readLine().equals("stop")) {
                 timer.stop();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void testExecute4(){
-        SingleThreadSchedualTimer timer = new SingleThreadSchedualTimer();
+    public static void testExecute4() {
+        SingleThreadScheduleTimer timer = new SingleThreadScheduleTimer();
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 13);
         calendar.set(Calendar.MINUTE, 50);
@@ -94,13 +91,13 @@ public class SingleThreadSchedualTimerTest {
             if (new BufferedReader(new InputStreamReader(System.in)).readLine().equals("stop")) {
                 timer.stop();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void testExecute5(){
-        SingleThreadSchedualTimer timer = new SingleThreadSchedualTimer();
+    public static void testExecute5() {
+        SingleThreadScheduleTimer timer = new SingleThreadScheduleTimer();
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 15);
         calendar.set(Calendar.MINUTE, 49);
@@ -116,13 +113,13 @@ public class SingleThreadSchedualTimerTest {
             if (new BufferedReader(new InputStreamReader(System.in)).readLine().equals("stop")) {
                 timer.stop();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void testExecute6(){
-        SingleThreadSchedualTimer timer = new SingleThreadSchedualTimer();
+    public static void testExecute6() {
+        SingleThreadScheduleTimer timer = new SingleThreadScheduleTimer();
         timer.executeAtFixedRate(new Task() {
             @Override
             public void taskForJob() {
@@ -133,7 +130,7 @@ public class SingleThreadSchedualTimerTest {
             if (new BufferedReader(new InputStreamReader(System.in)).readLine().equals("stop")) {
                 timer.stop();
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

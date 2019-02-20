@@ -1,8 +1,8 @@
-package com.xuyihao.timer;
+package com.github.johnsonmoon.timer;
 
 /**
  * Created by Xuyh at 2016/08/04 上午 11:30.
- *
+ * <p>
  * 具体任务虚类，使用时候继承重写taskForJob方法
  */
 public abstract class Task {
